@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="head">
+        <p>calc</p>
+        <p class="theme">theme <span><input type="checkbox"><input type="checkbox" name="" id=""></span></p>
+      </div>
+      <div class="input">
+       <input type="text" class="output" value="" placeholder="0">
+      </div>
+     <div class="hey">
+      <div class="btns">
+        <button class="btn num" onclick="change(7)" >7</button>
+        <button class="btn num" onclick="change(8)"  >8</button>
+        <button class="btn num" onclick="change(9)" >9</button>
+        <button class="btn del"  onclick="del()">DEL</button>
+        <button class="btn num" onclick="change(4)" >4</button>
+        <button class="btn num" onclick="change(5)"  >5</button>
+        <button class="btn num" onclick="change(6)">6</button>
+        <button class="btn add" onclick="change('+')">+</button>
+        <button class="btn num" onclick="change(1)"  >1</button>
+        <button class="btn num" onclick="change(2)" >2</button>
+        <button class="btn num" onclick="change(3)" >3</button>
+        <button class="btn sub" onclick="change('-')">-</button>
+        <button class="btn num" onclick="change('.')">.</button>
+        <button class="btn decimal" onclick="change(0)" >0</button>
+        <button class="btn divide" onclick="change('/')" >/</button>
+        <button class="btn mutlipy" onclick="change('*')" >*</button>
+      </div>
+      <div class="big">
+        <button class="big-btn0" onclick="reset()">RESET</button>
+        <button class="big-btn"  onclick="result()">=</button>
+      </div>
+     </div>
+    </div>
+
+
+  </main>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+</html>
