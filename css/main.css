@@ -384,4 +384,12 @@ main button {
 }
 .theme3 main .container .head .themes .toggles input[type=range] {
   background: hsl(268, 71%, 12%);
+}
+
+.attribution {
+  color: hsl(6, 70%, 34%);
+  font-size: 1.3em;
+}
+.attribution a {
+  color: hsl(185, 58%, 25%);
 }/*# sourceMappingURL=main.css.map */
