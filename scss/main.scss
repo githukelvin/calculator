@@ -27,7 +27,10 @@ main{
         width: 34rem;
         margin: 6.23rem auto;
 
-        
+        @include responsiveness(500px){
+            width: 88%;
+            margin: 1.8rem auto;
+        }
 
         .head{
             display: flex;
@@ -37,6 +40,7 @@ main{
             width: 100%;
             height: 3rem;
             padding-inline: .5em;
+        
             p{
                 font-size: 33px;
                 font-weight: 700;
@@ -48,6 +52,9 @@ main{
             margin-top: 4px;
             align-items: center;
             gap: 1.47em;
+                @include responsiveness(500px) {
+                       margin-top: 15px;
+                    }
             .theme {
                     font-size: .76em;
                     letter-spacing: 1px;
@@ -113,7 +120,9 @@ main{
             align-items: center;
             border-radius: 15px;
             margin-bottom: 1.75em;
-            
+                @include responsiveness(500px) {
+                        height: 5.8em;
+                    }
             .output{
                 background: hsl(223, 31%, 20%);
                 color: $White;
@@ -140,6 +149,10 @@ main{
             background:$Verydarkdesaturatedbluetogglebackgroundkeypadbackground;
             width: 100%;
             padding: 1.8rem 0;
+            @include responsiveness(500px) {
+                padding: 1.2rem 0;
+                padding-bottom: 2.2em;
+                }
         .btns{
             background: hsl(223, 31%, 20%);
             width: 88%;
@@ -148,6 +161,10 @@ main{
             gap: 1.5rem;
             grid-auto-rows: auto;
             margin: 0 auto;
+                @include responsiveness(500px) {
+                       width: 85%;
+                       gap: .9em;
+                    }
             
             
             .btn{
@@ -163,6 +180,14 @@ main{
                 &:hover{
                     background: $White;
                 }
+                @include responsiveness(500px) {
+                  padding: 1rem 1.28rem;
+                  font-size: 2em;
+                }
+                @include responsiveness(350px) {
+                    padding: 1rem 1rem;
+                    font-size: 2em;
+                }
 
             }
             .del {
@@ -175,15 +200,34 @@ main{
                 &:hover {
                         background: rgba($color: $White, $alpha: 0.4);
                     }
+                @include responsiveness(500px) {
+                    padding: .3rem .9rem;
+                    font-size: 1.2em;
+                }
+                @include responsiveness(350px) {
+                    padding: .3rem .9rem;
+                    font-size: 1em;
+                }
         }
         .sec{
             margin-top: 5px;
+            @include responsiveness(500px){
+                margin-top: 3px;
+            }
         }
         .thi{
             margin-top: 5px;
             margin-bottom: 10px;
+
+        @include responsiveness(500px) {
+                margin-top: 0px;
+                margin-bottom: 8px;
+                // font-size: 1.3em;
+            }
         }
-       
+       .num0{
+        width: auto;
+       }
         .decimal ,.num0 ,.divide ,.mutlipy{
             margin-top: -5px;
         }
@@ -197,6 +241,10 @@ main{
             background: hsl(223, 31%, 20%);
             gap: 1.3rem;
             margin: 1.85rem auto 0 auto;
+            @include responsiveness(500px){
+                width: 86%;
+                margin: 1rem auto 0 auto;
+            }
             .big-btn0{
                 padding: 1rem 0;
                 border-radius: 5px;
@@ -206,6 +254,9 @@ main{
                 box-shadow: 0px 5px 0px $Desaturateddarkbluekeyshadow;
                 &:hover{
                     background: rgba( $White,  0.4);
+                }
+                @include  responsiveness(500px){
+                    font-size: 1.5em;
                 }
             }
 
@@ -220,6 +271,7 @@ main{
                         // background: rgba($White,.3);
                         opacity: .7;
                         }
+                        
             }
         }
     }

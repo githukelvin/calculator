@@ -18,6 +18,12 @@ main .container {
   width: 34rem;
   margin: 6.23rem auto;
 }
+@media (max-width: 500px) {
+  main .container {
+    width: 88%;
+    margin: 1.8rem auto;
+  }
+}
 main .container .head {
   display: flex;
   flex-direction: row;
@@ -37,6 +43,11 @@ main .container .head .themes {
   margin-top: 4px;
   align-items: center;
   gap: 1.47em;
+}
+@media (max-width: 500px) {
+  main .container .head .themes {
+    margin-top: 15px;
+  }
 }
 main .container .head .themes .theme {
   font-size: 0.76em;
@@ -94,6 +105,11 @@ main .container .input {
   border-radius: 15px;
   margin-bottom: 1.75em;
 }
+@media (max-width: 500px) {
+  main .container .input {
+    height: 5.8em;
+  }
+}
 main .container .input .output {
   background: hsl(223, 31%, 20%);
   color: rgb(255, 255, 255);
@@ -119,6 +135,12 @@ main .container .hey {
   width: 100%;
   padding: 1.8rem 0;
 }
+@media (max-width: 500px) {
+  main .container .hey {
+    padding: 1.2rem 0;
+    padding-bottom: 2.2em;
+  }
+}
 main .container .hey .btns {
   background: hsl(223, 31%, 20%);
   width: 88%;
@@ -127,6 +149,12 @@ main .container .hey .btns {
   gap: 1.5rem;
   grid-auto-rows: auto;
   margin: 0 auto;
+}
+@media (max-width: 500px) {
+  main .container .hey .btns {
+    width: 85%;
+    gap: 0.9em;
+  }
 }
 main .container .hey .btns .btn {
   width: fit-content;
@@ -142,6 +170,18 @@ main .container .hey .btns .btn {
 main .container .hey .btns .btn:hover {
   background: rgb(255, 255, 255);
 }
+@media (max-width: 500px) {
+  main .container .hey .btns .btn {
+    padding: 1rem 1.28rem;
+    font-size: 2em;
+  }
+}
+@media (max-width: 350px) {
+  main .container .hey .btns .btn {
+    padding: 1rem 1rem;
+    font-size: 2em;
+  }
+}
 main .container .hey .btns .del {
   width: fit-content;
   padding: 0.5rem 1.8rem;
@@ -153,12 +193,38 @@ main .container .hey .btns .del {
 main .container .hey .btns .del:hover {
   background: rgba(255, 255, 255, 0.4);
 }
+@media (max-width: 500px) {
+  main .container .hey .btns .del {
+    padding: 0.3rem 0.9rem;
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 350px) {
+  main .container .hey .btns .del {
+    padding: 0.3rem 0.9rem;
+    font-size: 1em;
+  }
+}
 main .container .hey .btns .sec {
   margin-top: 5px;
+}
+@media (max-width: 500px) {
+  main .container .hey .btns .sec {
+    margin-top: 3px;
+  }
 }
 main .container .hey .btns .thi {
   margin-top: 5px;
   margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  main .container .hey .btns .thi {
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+}
+main .container .hey .btns .num0 {
+  width: auto;
 }
 main .container .hey .btns .decimal, main .container .hey .btns .num0, main .container .hey .btns .divide, main .container .hey .btns .mutlipy {
   margin-top: -5px;
@@ -171,6 +237,12 @@ main .container .hey .big {
   gap: 1.3rem;
   margin: 1.85rem auto 0 auto;
 }
+@media (max-width: 500px) {
+  main .container .hey .big {
+    width: 86%;
+    margin: 1rem auto 0 auto;
+  }
+}
 main .container .hey .big .big-btn0 {
   padding: 1rem 0;
   border-radius: 5px;
@@ -181,6 +253,11 @@ main .container .hey .big .big-btn0 {
 }
 main .container .hey .big .big-btn0:hover {
   background: rgba(255, 255, 255, 0.4);
+}
+@media (max-width: 500px) {
+  main .container .hey .big .big-btn0 {
+    font-size: 1.5em;
+  }
 }
 main .container .hey .big .big-btn {
   padding: 1rem 0;
