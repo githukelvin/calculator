@@ -36,13 +36,13 @@ main .container .head .themes {
   display: flex;
   margin-top: 4px;
   align-items: center;
-  gap: 1.65em;
+  gap: 1.47em;
 }
 main .container .head .themes .theme {
   font-size: 0.76em;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 5600;
 }
 main .container .head .themes .toggles {
   width: 70px;
@@ -67,6 +67,7 @@ main .container .head .themes .toggles input[type=range] {
   width: 100%;
   position: relative;
   margin-top: -1px;
+  padding-inline: 0.5em;
   margin-left: 4px;
   -webkit-appearance: none;
   background: hsl(223, 31%, 20%);
@@ -90,11 +91,13 @@ main .container .input {
   background: hsl(223, 31%, 20%);
   display: flex;
   align-items: center;
+  border-radius: 15px;
   margin-bottom: 1.75em;
 }
 main .container .input .output {
   background: hsl(223, 31%, 20%);
   color: rgb(255, 255, 255);
+  border-radius: 15px;
   font-size: 3.4em;
   display: flex;
   align-items: center;
@@ -127,11 +130,17 @@ main .container .hey .btns {
 }
 main .container .hey .btns .btn {
   width: fit-content;
-  padding: 0.9rem 2.5rem;
+  padding: 0.7rem 2.5rem;
   border-radius: 10px;
   font-weight: 700;
+  display: grid;
+  place-items: center;
   font-size: 2.5em;
   background: hsl(30, 25%, 89%);
+  box-shadow: 0px 5px 0px hsl(28, 16%, 65%);
+}
+main .container .hey .btns .btn:hover {
+  background: rgb(255, 255, 255);
 }
 main .container .hey .btns .del {
   width: fit-content;
@@ -139,6 +148,17 @@ main .container .hey .btns .del {
   color: rgb(255, 255, 255);
   font-size: 1.6em;
   background: hsl(225, 21%, 49%);
+  box-shadow: 0px 5px 0px hsl(224, 28%, 35%);
+}
+main .container .hey .btns .del:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+main .container .hey .btns .sec {
+  margin-top: 5px;
+}
+main .container .hey .btns .thi {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 main .container .hey .btns .decimal, main .container .hey .btns .num0, main .container .hey .btns .divide, main .container .hey .btns .mutlipy {
   margin-top: -5px;
@@ -149,23 +169,29 @@ main .container .hey .big {
   grid-template-columns: 1fr 1fr;
   background: hsl(223, 31%, 20%);
   gap: 1.3rem;
-  margin: 1.3rem auto 0 auto;
+  margin: 1.85rem auto 0 auto;
 }
 main .container .hey .big .big-btn0 {
-  padding: 1.23rem 0;
+  padding: 1rem 0;
   border-radius: 5px;
   color: rgb(255, 255, 255);
   font-size: 1.8em;
   background-color: hsl(225, 21%, 49%);
-  box-shadow: 0px 0.2px 0px hsla(185, 58%, 25%, 0.065), 0px 0.5px 0px hsla(185, 58%, 25%, 0.093), 0px 1px 0px hsla(185, 58%, 25%, 0.115), 0px 1.8px 0px hsla(185, 58%, 25%, 0.137), 0px 3.3px 0px hsla(185, 58%, 25%, 0.165), 0px 8px 0px hsla(185, 58%, 25%, 0.23);
+  box-shadow: 0px 5px 0px hsl(224, 28%, 35%);
+}
+main .container .hey .big .big-btn0:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 main .container .hey .big .big-btn {
-  padding: 1.23rem 0;
+  padding: 1rem 0;
   border-radius: 5px;
   color: rgb(255, 255, 255);
   font-size: 1.8em;
+  box-shadow: 0px 5px 0px hsl(6, 70%, 34%);
   background: hsl(6, 63%, 50%);
-  box-shadow: 0px 0.2px 0px hsla(25, 99%, 27%, 0.065), 0px 0.5px 0px hsla(25, 99%, 27%, 0.093), 0px 1px 0px hsla(25, 99%, 27%, 0.115), 0px 1.8px 0px hsla(25, 99%, 27%, 0.137), 0px 3.3px 0px hsla(25, 99%, 27%, 0.165), 0px 8px 0px hsla(25, 99%, 27%, 0.23);
+}
+main .container .hey .big .big-btn:hover {
+  opacity: 0.7;
 }
 main button {
   color: hsl(60, 10%, 19%);
@@ -177,19 +203,108 @@ main button {
 .theme2 {
   background: hsl(0, 0%, 90%);
 }
+.theme2 main .container .head p {
+  color: hsl(60, 10%, 19%);
+}
+.theme2 main .container .input {
+  background: hsl(0, 0%, 93%);
+}
+.theme2 main .container .input .output {
+  background: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+.theme2 main .container .hey .btns .del {
+  background: hsl(185, 42%, 37%);
+  box-shadow: 0 5px 0px hsl(185, 58%, 25%);
+}
+.theme2 main .container .hey .big .big-btn0 {
+  background: hsl(185, 42%, 37%);
+  box-shadow: 0px 5px 0px hsl(185, 58%, 25%);
+}
+.theme2 main .container .hey .big .big-btn {
+  background: hsl(185, 58%, 25%);
+  box-shadow: 0px 5px 0px hsl(25, 98%, 40%);
+}
+.theme2 main .container .hey,
+.theme2 main .container .btns,
+.theme2 main .container .big {
+  background: hsl(25, 99%, 27%);
+}
+.theme2 main .container .head p {
+  color: hsl(60, 10%, 19%);
+}
 .theme2 main .container .head .themes .toggles input[type=range] {
   background: hsl(0, 5%, 81%);
 }
 .theme2 main .container .head .themes .toggles input[type=range]::-webkit-slider-thumb {
+  background: hsl(185, 58%, 25%);
+}
+.theme2 main .container .hey,
+.theme2 main .container .btns,
+.theme2 main .container .big {
+  background: hsl(0, 5%, 81%);
+}
+.theme2 main .container .head .themes .toggles input[type=range] {
+  background: hsl(0, 5%, 81%);
+}
+.theme2 main .container .head .themes .toggles input[type=range]::-webkit-slider-thumb {
+  background: hsl(25, 99%, 27%);
+}
+.theme2 main .container .hey .big .big-btn {
   background: hsl(25, 98%, 40%);
+  box-shadow: 0px 5px 0px hsl(25, 99%, 27%);
 }
 
 .theme3 {
   background: hsl(268, 75%, 9%);
 }
-.theme3 main .container .head .themes .toggles input[type=range] {
+.theme3 main .container .head p {
+  color: hsl(52, 100%, 62%);
+}
+.theme3 main .container .input {
   background: hsl(268, 71%, 12%);
+}
+.theme3 main .container .input .output {
+  background: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+.theme3 main .container .hey .btns .del {
+  background: hsl(281, 89%, 26%);
+  box-shadow: 0 5px 0px hsl(281, 89%, 26%);
+}
+.theme3 main .container .hey .big .big-btn0 {
+  background: hsl(281, 89%, 26%);
+  box-shadow: 0px 5px 0px hsl(281, 89%, 26%);
+}
+.theme3 main .container .hey .big .big-btn {
+  background: hsl(176, 100%, 44%);
+  box-shadow: 0px 5px 0px hsl(177, 92%, 70%);
+}
+.theme3 main .container .hey,
+.theme3 main .container .btns,
+.theme3 main .container .big {
+  background: hsl(268, 71%, 12%);
+}
+.theme3 main .container .head p {
+  color: hsl(52, 100%, 62%);
+}
+.theme3 main .container .head .themes .toggles input[type=range] {
+  background: hsl(177, 92%, 70%);
 }
 .theme3 main .container .head .themes .toggles input[type=range]::-webkit-slider-thumb {
   background: hsl(176, 100%, 44%);
+}
+.theme3 main .container .hey .big .big-btn0 {
+  box-shadow: 0px 5px 0px hsl(290, 70%, 36%);
+}
+.theme3 main .container .hey .big .big-btn {
+  box-shadow: 0px 5px 0px hsl(177, 92%, 70%);
+}
+.theme3 main .container .hey .btns .btn {
+  background: hsl(268, 47%, 21%);
+  color: hsl(52, 100%, 62%);
+  box-shadow: 0 4px 0px hsl(290, 70%, 36%);
+}
+.theme3 main .container .head .themes .toggles input[type=range] {
+  background: hsl(268, 71%, 12%);
 }/*# sourceMappingURL=main.css.map */

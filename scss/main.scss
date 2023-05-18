@@ -3,7 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;700&display=swap');
 
 
-
+@mixin responsiveness($width){
+    @media (max-width: $width) {
+        @content;
+        }
+}
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +27,8 @@ main{
         width: 34rem;
         margin: 6.23rem auto;
 
+        
+
         .head{
             display: flex;
             flex-direction: row;
@@ -41,12 +47,12 @@ main{
             display: flex;
             margin-top: 4px;
             align-items: center;
-            gap: 1.65em;
+            gap: 1.47em;
             .theme {
                     font-size: .76em;
                     letter-spacing: 1px;
                     text-transform: uppercase;
-                    font-weight: 300;
+                    font-weight: 5600;
                 }
             
                 .toggles {
@@ -74,6 +80,7 @@ main{
                         width: 100%;
                         position: relative;
                         margin-top: -1px;
+                        padding-inline: .5em;
                         margin-left: 4px;
                         -webkit-appearance: none;
                         background: $Verydarkdesaturatedbluetogglebackgroundkeypadbackground;
@@ -104,11 +111,13 @@ main{
             background: hsl(223, 31%, 20%);
             display: flex;
             align-items: center;
+            border-radius: 15px;
             margin-bottom: 1.75em;
             
             .output{
                 background: hsl(223, 31%, 20%);
                 color: $White;
+                border-radius: 15px;
                 font-size:3.4em;
                 display: flex;
                 align-items: center;
@@ -143,19 +152,17 @@ main{
             
             .btn{
                 width: fit-content;
-                padding: .9rem 2.5rem;
+                padding: .7rem 2.5rem;
                 border-radius: 10px;
                 font-weight: 700;
+                display: grid;
+                place-items: center;
                 font-size: 2.5em;
                 background: hsl(30, 25%, 89%);
-//                 box-shadow:
-//                 0px 0.2px 0px hsl(35, 11%, 61%, 0.065),
-//                 0px 0.5px 0px hsl(35, 11%, 61%, 0.093),
-//                 0px 1px 0px hsl(35, 11%, 61%, 0.115),
-//                 0px 1.8px 0px hsl(35, 11%, 61%, 0.137),
-//                 0px 3.3px 0px hsl(35, 11%, 61%, 0.165),
-//                 0px 8px 0px hsl(35, 11%, 61%,) 0.23
-// ;
+                box-shadow:0px 5px 0px $Grayishorangekeyshadow;
+                &:hover{
+                    background: $White;
+                }
 
             }
             .del {
@@ -164,7 +171,19 @@ main{
                 color:$White;
                 font-size: 1.6em;
                 background: $Desaturateddarkbluekeybackground;
+                box-shadow: 0px 5px 0px $Desaturateddarkbluekeyshadow;
+                &:hover {
+                        background: rgba($color: $White, $alpha: 0.4);
+                    }
         }
+        .sec{
+            margin-top: 5px;
+        }
+        .thi{
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+       
         .decimal ,.num0 ,.divide ,.mutlipy{
             margin-top: -5px;
         }
@@ -177,38 +196,30 @@ main{
             grid-template-columns: 1fr 1fr;
             background: hsl(223, 31%, 20%);
             gap: 1.3rem;
-            margin: 1.3rem auto 0 auto;
+            margin: 1.85rem auto 0 auto;
             .big-btn0{
-                padding: 1.23rem 0;
+                padding: 1rem 0;
                 border-radius: 5px;
                 color: $White;
                 font-size: 1.8em;
                 background-color: hsl(225, 21%, 49%);
-                box-shadow:
-                
-                0px 0.2px 0px hsl(185, 58%, 25%, 0.065),
-                0px 0.5px 0px hsl(185, 58%, 25%, 0.093),
-                0px 1px 0px hsl(185, 58%, 25%, 0.115),
-                0px 1.8px 0px hsl(185, 58%, 25%, 0.137),
-                0px 3.3px 0px hsl(185, 58%, 25%, 0.165),
-                0px 8px 0px hsl(185, 58%, 25%, 0.23)
-              ;
+                box-shadow: 0px 5px 0px $Desaturateddarkbluekeyshadow;
+                &:hover{
+                    background: rgba( $White,  0.4);
+                }
             }
 
             .big-btn{
-                padding:1.23rem 0;
+                padding:1rem 0;
                 border-radius: 5px;
                 color: $White;
                 font-size: 1.8em;
-                 background:  hsl(6, 63%, 50%);
-                 box-shadow:
-                 0px 0.2px 0px hsl(25, 99%, 27%, 0.065),
-                 0px 0.5px 0px hsl(25, 99%, 27%, 0.093),
-                 0px 1px 0px hsl(25, 99%, 27%, 0.115),
-                 0px 1.8px 0px hsl(25, 99%, 27%, 0.137),
-                 0px 3.3px 0px hsl(25, 99%, 27%, 0.165),
-                 0px 8px 0px hsl(25, 99%, 27%, 0.23)
-               ;
+                box-shadow: 0px 5px 0px $Darkredkeyshadow;
+                    background:$Redkeybackgroundtoggle;
+                    &:hover {
+                        // background: rgba($White,.3);
+                        opacity: .7;
+                        }
             }
         }
     }
@@ -221,25 +232,113 @@ main{
     }
 
 }
-
-.theme2{
-        background: $Lightgraymainbackground;
+@mixin themer($main,$screen,$textcolor,$keybackground,$shadow,$toggle,$toggleshadow,$all,$toggleBg){
+    background: $main;//main
     
-    main .container .head .themes .toggles input[type=range]{
-        background:$Grayishredtogglebackgroundkeypadbackground ;
-        
-        &::-webkit-slider-thumb {
-        background: $Orangekeybackgroundtoggle;
-    }
+        main .container {
+            .head{
+               p {
+                color: $textcolor;
+            }
+            }
+            .input {
+                background: $screen;//screen
+    
+                .output {
+                    background: $screen;//screen
+                    color: $textcolor;//textcolor
+                }
+            }
+    
+            .hey {
+                .btns {
+                    .btn {}
+    
+                    .del {
+                        background: $keybackground; //keybackground
+                        box-shadow: 0 5px 0px $shadow;//shadow
+                    }
+                }
+    
+                .big {
+                    .big-btn0 {
+                        background: $keybackground;  //keybackground
+                        box-shadow: 0px 5px 0px $shadow;  //shadow
+                    }
+    
+                    .big-btn {
+                        background: $toggle; //toggle
+                        box-shadow: 0px 5px 0px $toggleshadow;  //toggleshadow
+                    }
+                }
+            }
+    
+            .hey,
+            .btns,
+            .big {
+                background: $all; //all
+    
+    
+            }
+    
+            .head {
+    
+                p {
+                    color: $textcolor; //textcolor
+                }
+    
+                .themes .toggles input[type=range] {
+                    background: $toggleBg ; //toggleBg
+    
+                    &::-webkit-slider-thumb {
+                        background: $toggle; //toggle
+                    }
+                }
+            }
+        }
 }
+.theme2{
+@include themer($Lightgraymainbackground, $Verylightgrayscreenbackground , $Verydarkgrayishyellow , $Darkmoderatecyankeybackground , $Verydarkcyankeyshadow ,$Verydarkcyankeyshadow ,$Orangekeybackgroundtoggle ,$Darkorangekeyshadow , $Grayishredtogglebackgroundkeypadbackground);
+        main .container{
+                .hey,
+                .btns,
+                .big {
+                background: $Grayishredtogglebackgroundkeypadbackground;
+            }
+            .head .themes .toggles input[type=range] {
+                background: $Grayishredtogglebackgroundkeypadbackground; //toggleBg
+                &::-webkit-slider-thumb {
+                    background: $Darkorangekeyshadow; //toggle
+                }
+            }}
+                        main .container .hey .big .big-btn{
+                            background: $Orangekeybackgroundtoggle;
+                            box-shadow: 0px 5px 0px $Darkorangekeyshadow;
+                        }
 }
 .theme3 {
-        background: $Verydarkvioletmainbackground;
-    
-    main .container .head .themes .toggles input[type=range]{
-        background: $Verydarkviolettogglebackgroundkeypadbackgroundscreenbackground;
-        &::-webkit-slider-thumb{
-        background: $Purecyankeybackgroundtoggle;
-    }}
+@include themer($Verydarkvioletmainbackground, $Verydark, $Lightyellow, $Darkvioletkeybackground, $Darkvioletkeybackground, $Purecyankeybackgroundtoggle, $Softcyankeyshadow, $Verydark, $Softcyankeyshadow);
+// @include themer($Verydarkvioletmainbackground,$Verydark ,$Lightyellow ,$Darkvioletkeybackground , $Vividmagentakeyshadow,$Darkmagentakeyshadow ,$Purecyankeybackgroundtoggle ,$Softcyankeyshadow );
 
+
+        main .container .hey {
+            .big {
+                .big-btn0 {
+                        box-shadow: 0px 5px 0px $Darkmagentakeyshadow; //shadow
+                    }
+                
+                    .big-btn {
+                        box-shadow: 0px 5px 0px $Softcyankeyshadow; //toggleshadow
+                    }
+            }
+            .btns{ 
+                    .btn {
+                            background: $Verydarkvioletkeybackground; //screen
+                            color: $Lightyellow; //textcolor
+                            box-shadow: 0 4px 0px $Darkmagentakeyshadow;
+                        }}}
+        main .container .head .themes .toggles input[type=range] {
+            background: $Verydark; //toggleBg
+        }
+            
 }
