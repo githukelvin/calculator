@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
   <title>Frontend Mentor | Calculator app</title>
-
+ 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -19,7 +19,18 @@
     <div class="container">
       <div class="head">
         <p>calc</p>
-        <p class="theme">theme <span><input type="checkbox"><input type="checkbox" name="" id=""></span></p>
+        <div class="themes">
+        <p class="theme">theme </p>
+        <div class="toggles">
+          <div class="values">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+        <input type="range"  value="1" min="1"  max="3"  name="" id="">
+        </div>
+        
+        </div>
       </div>
       <div class="input">
        <input type="text" class="output" value="" placeholder="0">
@@ -38,10 +49,10 @@
         <button class="btn num" onclick="change(2)" >2</button>
         <button class="btn num" onclick="change(3)" >3</button>
         <button class="btn sub" onclick="change('-')">-</button>
-        <button class="btn num" onclick="change('.')">.</button>
-        <button class="btn decimal" onclick="change(0)" >0</button>
+        <button class="btn decimal" onclick="change('.')">.</button>
+        <button class="btn num num0" onclick="change(0)" >0</button>
         <button class="btn divide" onclick="change('/')" >/</button>
-        <button class="btn mutlipy" onclick="change('*')" >*</button>
+        <button class="btn mutlipy" onclick="change('*')" >x</button>
       </div>
       <div class="big">
         <button class="big-btn0" onclick="reset()">RESET</button>
